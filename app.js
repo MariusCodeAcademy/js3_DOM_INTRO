@@ -26,6 +26,24 @@ const artTextEls = document.querySelectorAll(".article-text");
 console.log("artTextEls:", artTextEls);
 
 mainTitleEl.textContent = "Dynamic DOM Title";
-
+console.clear();
 // pazymeti visus paragrafus esancius straipsnyje ir pakeisti ju spalva
 // ir kad jie butu visi didziosiom raidem
+
+const pInsideArtcl = document.querySelectorAll("article p");
+
+// pInsideArtcl[0].style.color = "tomato";
+// pInsideArtcl[1].style.color = "tomato";
+// pInsideArtcl[2].style.color = "tomato";
+
+// pInsideArtcl.forEach((p) => {
+//   p.style.color = "tomato";
+//   p.style.textTransform = "uppercase";
+// });
+
+for (let p of pInsideArtcl) {
+  p.style.color = "tomato";
+  p.style.textTransform = "uppercase";
+}
+
+console.log("pInsideArtcl", pInsideArtcl);

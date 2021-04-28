@@ -1,3 +1,7 @@
 .sec-title {
   text-transform: uppercase;
 }
+
+article p {
+  /* background-color: blue; */
+}

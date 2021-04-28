@@ -12,4 +12,4 @@
 
 // 6. pakeisti article paragrafo teksto dydi i 20px
 
-//
+// 7 prie esamos Pagr antrastes prideti teksta '(pakeista)'
