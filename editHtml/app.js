@@ -24,4 +24,14 @@
 
 // 12. padaryti kad visi main-aside el butu 18to dydzio ir melynos spalvos
 
-//
+// 13. prideti visiems some-list li elementams klase 'some-list__element'
+
+// 14. nuimti some list elementams burbuliukus nuo kaires puses
+
+// 15. apjuosti some list elmenta su 2px apvadu kurio kampai butu apvalnti ir uzdeti padingo 15px is visu pusiu
+
+// 16. antro ul saraso li elementams uzdeti didejanti id 'el_1', 'el_2', 'el_3' ir tt
+
+// 17. suskaiciuoti kiek is viso puslapyje yra li el
+
+// 18. antro ul saraso elementu tekstas turetu buti skaiciai didejantys nuo 55
