@@ -7,21 +7,37 @@ mainTitleEl.textContent = "I have done Task number 1";
 
 // 2. pakeisti parg antrastes spalva
 mainTitleEl.style.color = "Tomato";
+mainTitleEl.style.fontSize = "50px";
+mainTitleEl.style["font-size"] = "50px";
+
 // 3. prideti pagr antrastei id 'main-title'
+mainTitleEl.id = "main-title";
 
 // 4. prideti article clase
+const art1 = document.querySelector("article");
+art1.className = "main-article";
 
 // 5. pakeisti article viduje antrastes texta
+const artTitleEl = document.querySelector(".main-article > h2");
+console.log("artTitleEl", artTitleEl);
+artTitleEl.textContent = "Main artcle title";
 
 // 6. pakeisti article paragrafu teksto dydi i 20px
+const pInsideArt = art1.querySelectorAll("p");
+console.log(pInsideArt);
+// sukam cikla nes turim i masyva panasia struktura
+pInsideArt.forEach((p) => (p.style.fontSize = "20px"));
 
 // 7 prie esamos Pagr antrastes prideti teksta '(pakeista)'
 
 // 8 pakeisti paskutinio article paragrafo texto srifta i Verdana
 
-// 9. padaryti kad tik tiesioginiai article paragrafai butu 20px dydzio
+// 9. padaryti kad tik tiesioginiai article paragrafai butu 25px dydzio
 
 // 10. prideti prie aside article vidue clase "inner-aside"
+// className
+const innerAsideEl = art1.querySelector("aside");
+innerAsideEl.className = "inner-aside";
 
 // 11. prideti prie aside nesancios article viduej klase 'main-aside'
 
