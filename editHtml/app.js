@@ -7,7 +7,7 @@ mainTitleEl.textContent = "I have done Task number 1";
 
 // 2. pakeisti parg antrastes spalva
 mainTitleEl.style.color = "Tomato";
-// mainTitleEl.style.fontSize = "50px";
+mainTitleEl.style.fontSize = "30px";
 // mainTitleEl.style["font-size"] = "50px";
 
 // 3. prideti pagr antrastei id 'main-title'
@@ -34,6 +34,9 @@ const dabartinisTextas = mainTitleEl.textContent;
 mainTitleEl.textContent += " (pakeista)";
 
 // 8 pakeisti paskutinio article paragrafo texto srifta i Verdana
+const lastPar = document.querySelector("article p:last-child");
+console.log("lastPar", lastPar);
+lastPar.style.fontFamily = "Verdana";
 
 // 9. padaryti kad tik tiesioginiai article paragrafai butu 25px dydzio
 const ptiesiogArtVaikai = document.querySelectorAll(".main-article > p");
@@ -73,3 +76,7 @@ innerAsideEl.className = "inner-aside";
 
 // 22. padaryti funkciju pagalba kad galetume didinti ir mazinti skaitliuka vienetu
 // pan kaip 19-21 uzd
+
+function add7() {
+  console.log("padidinau");
+}
