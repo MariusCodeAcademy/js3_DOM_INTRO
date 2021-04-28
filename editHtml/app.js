@@ -7,8 +7,8 @@ mainTitleEl.textContent = "I have done Task number 1";
 
 // 2. pakeisti parg antrastes spalva
 mainTitleEl.style.color = "Tomato";
-mainTitleEl.style.fontSize = "50px";
-mainTitleEl.style["font-size"] = "50px";
+// mainTitleEl.style.fontSize = "50px";
+// mainTitleEl.style["font-size"] = "50px";
 
 // 3. prideti pagr antrastei id 'main-title'
 mainTitleEl.id = "main-title";
@@ -29,10 +29,20 @@ console.log(pInsideArt);
 pInsideArt.forEach((p) => (p.style.fontSize = "20px"));
 
 // 7 prie esamos Pagr antrastes prideti teksta '(pakeista)'
+const dabartinisTextas = mainTitleEl.textContent;
+// mainTitleEl.textContent = dabartinisTextas + " (pakeista)";
+mainTitleEl.textContent += " (pakeista)";
 
 // 8 pakeisti paskutinio article paragrafo texto srifta i Verdana
 
 // 9. padaryti kad tik tiesioginiai article paragrafai butu 25px dydzio
+const ptiesiogArtVaikai = document.querySelectorAll(".main-article > p");
+console.log("ptiesiogArtVaikai", ptiesiogArtVaikai);
+
+for (let p of ptiesiogArtVaikai) {
+  p.style.fontSize = "25px";
+  p.style.color = "tomato";
+}
 
 // 10. prideti prie aside article vidue clase "inner-aside"
 // className
@@ -54,3 +64,12 @@ innerAsideEl.className = "inner-aside";
 // 17. suskaiciuoti kiek is viso puslapyje yra li el
 
 // 18. prie antro ul saraso elementu teksto prideti skaicius didejancius nuo 55
+
+// 19. parasyti funkcija kuri padidina pagr antrastes dydi 7px
+
+// 20. parasyti funkcija kuri sumazina pagr antrastes dydi 7px
+
+// 21. parasyti funkcija kuri nustato parg antrastes dydi i nustatytaja reiksme
+
+// 22. padaryti funkciju pagalba kad galetume didinti ir mazinti skaitliuka vienetu
+// pan kaip 19-21 uzd
