@@ -1,9 +1,12 @@
 "use strict"; // here we go again
 
 // 1. pakeisti Pagr antrastes teksta
+const mainTitleEl = document.querySelector("h1");
+console.dir(mainTitleEl);
+mainTitleEl.textContent = "I have done Task number 1";
 
 // 2. pakeisti parg antrastes spalva
-
+mainTitleEl.style.color = "Tomato";
 // 3. prideti pagr antrastei id 'main-title'
 
 // 4. prideti article clase
@@ -34,4 +37,4 @@
 
 // 17. suskaiciuoti kiek is viso puslapyje yra li el
 
-// 18. antro ul saraso elementu tekstas turetu buti skaiciai didejantys nuo 55
+// 18. prie antro ul saraso elementu teksto prideti skaicius didejancius nuo 55
