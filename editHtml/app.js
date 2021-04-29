@@ -53,20 +53,47 @@ const innerAsideEl = art1.querySelector("aside");
 innerAsideEl.className = "inner-aside";
 
 // 11. prideti prie aside nesancios article viduej klase 'main-aside'
+const asideOutside = art1.nextElementSibling;
+asideOutside.classList.add("main-aside");
+console.log("asideOutside", asideOutside);
 
 // 12. padaryti kad visi main-aside el butu 18to dydzio ir melynos spalvos
+// const mainSideEls = document.querySelectorAll(".main-aside > *");
+const mainSideEls = asideOutside.children;
+console.log(mainSideEls);
+
+for (let el of mainSideEls) {
+  el.style.fontSize = "18px";
+  el.style.color = "blue";
+}
 
 // 13. prideti visiems some-list li elementams klase 'some-list__element'
 
 // 14. nuimti some list elementams burbuliukus nuo kaires puses
 
-// 15. apjuosti some list elmenta su 2px apvadu kurio kampai butu apvalnti ir uzdeti padingo 15px is visu pusiu
-
+// 15. apjuosti some list elmenta su 2px apvadu kurio
+// kampai butu apvalnti ir uzdeti padingo 15px is visu pusiu
+const someListEl = document.querySelector(".some-list");
+someListEl.classList.add("special-style");
+someListEl.style.border = "2px solid tomato";
 // 16. antro ul saraso li elementams uzdeti didejanti id 'el_1', 'el_2', 'el_3' ir tt
+
+const secondUl = document.querySelector(".some-list").nextElementSibling;
+console.log("secondUl", secondUl.children);
+
+let count = 0;
+for (let liEl of secondUl.children) {
+  liEl.id = "el_" + ++count;
+}
 
 // 17. suskaiciuoti kiek is viso puslapyje yra li el
 
 // 18. prie antro ul saraso elementu teksto prideti skaicius didejancius nuo 55
+
+count = 54;
+for (let liEl of secondUl.children) {
+  liEl.textContent += " " + ++count;
+}
 
 // 19. parasyti funkcija kuri padidina pagr antrastes dydi 7px
 
@@ -76,7 +103,26 @@ innerAsideEl.className = "inner-aside";
 
 // 22. padaryti funkciju pagalba kad galetume didinti ir mazinti skaitliuka vienetu
 // pan kaip 19-21 uzd
+console.clear();
+const counterContainer = document.querySelector(".counter");
+const counterEl = counterContainer.firstElementChild;
 
-function add7() {
-  console.log("padidinau");
+let num = +counterEl.textContent;
+
+function plusCounter() {
+  // num += 1;
+  counterEl.innerText = ++num;
+}
+function minusCounter() {
+  num -= 1;
+  counterEl.innerText = num;
+}
+
+function changeCounter(direction, howMuch = 0) {
+  if (direction === "plus") {
+    num = num + 1 + howMuch;
+    counterEl.innerText = num;
+  } else if (direction === "minus") {
+    counterEl.innerText = --num;
+  }
 }
