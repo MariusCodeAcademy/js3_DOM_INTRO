@@ -12,7 +12,7 @@ const divAppEl = document.getElementById("app");
 divAppEl.insertAdjacentElement("beforebegin", h1El);
 
 // 2. sukurti virs h1 headerio elementa ir jame h3 antraste su tekstu
-// 'hederio antraste'
+// 'siandienos data' dinamiskai paduota
 
 // 3. dive '#app' sukurti section elementa i ji ideti h4 elementa ir paragrafa su
 // lorem tekstais
