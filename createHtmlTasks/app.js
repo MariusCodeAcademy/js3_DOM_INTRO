@@ -57,3 +57,74 @@ let person = {
   weight: 40,
   sex: "male",
 };
+
+// 10 po pries body tago uzdaryma sukurti nauja ol sarasa
+// kiekvienas jo li el turetu buti vardas ir pavarde is peopleObjs masyvo
+// 10.1 kiekvienas li tagas turi tureti title atributa kuriame butu
+// to zmogaus svoris ir ugis
+const peopleObjs = [
+  {
+    name: "Arananas",
+    surname: "Baras",
+    age: 7,
+    height: 110,
+    weight: 40,
+    sex: "male",
+  },
+  {
+    name: "Ugne",
+    surname: "Pugne",
+    age: 17,
+    height: 170,
+    weight: 60,
+    sex: "female",
+  },
+  {
+    name: "Saulius",
+    surname: "Bezda",
+    age: 77,
+    height: 165,
+    weight: 90,
+    sex: "male",
+  },
+  {
+    name: "Kentas",
+    surname: "Bentas",
+    age: 27,
+    height: 166,
+    weight: 40,
+    sex: "male",
+  },
+  {
+    name: "Sauja",
+    surname: "Mauja",
+    age: 37,
+    height: 165,
+    weight: 55,
+    sex: "female",
+  },
+  {
+    name: "Nojus",
+    surname: "Beda",
+    age: 39,
+    height: 184,
+    weight: 92,
+    sex: "male",
+  },
+  {
+    name: "Laras",
+    surname: "Makaule",
+    age: 27,
+    height: 192,
+    weight: 88,
+    sex: "male",
+  },
+  {
+    name: "Fanta",
+    surname: "Firtaite",
+    age: 17,
+    height: 168,
+    weight: 75,
+    sex: "female",
+  },
+];
