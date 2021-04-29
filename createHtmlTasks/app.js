@@ -24,7 +24,7 @@ let colors = ["blue", "green", "orange", "tomato", "red"];
 // 5. .main-article elementui prideti antraste h4 su klase
 // '.main-article__title'
 
-// 5.1 prideti 2 paragrafus su lorem tekstais kurie turetu klases
+// 5.1 .main-article elementui prideti 2 paragrafus su lorem tekstais kurie turetu klases
 // '.main-article__text'
 
 // 6. po main-article sukurti aside elmenta su klase 'info'
@@ -44,4 +44,16 @@ let colors = ["blue", "green", "orange", "tomato", "red"];
 // 8.sukurti mygtuka headeryje su tekstu 'modal', ji paspaudus turetu pasirodyti
 // arba pasislepti modal. (prideti nuimti klase? )
 
-//
+// 9. sukurti div su id person ir jame atvaizduoti informacija is objekto:
+// paragraphu ir span pavidaliu pvz
+// <p><strong>Name:</strong>Araranas</p>
+// <p><strong>Surname:</strong>Baras</p>
+// ...
+let person = {
+  name: "Arananas",
+  surname: "Baras",
+  age: 7,
+  height: 110,
+  weight: 40,
+  sex: "male",
+};
