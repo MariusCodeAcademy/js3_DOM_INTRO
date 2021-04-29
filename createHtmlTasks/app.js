@@ -13,6 +13,14 @@ divAppEl.insertAdjacentElement("beforebegin", h1El);
 
 // 2. sukurti virs h1 headerio elementa ir jame h3 antraste su tekstu
 // 'siandienos data' dinamiskai paduota
+const now = new Date();
+const options = { weekday: "long", year: "numeric", month: "long", day: "numeric" };
+const niceDate = now.toLocaleDateString("LT", options);
+const nH3 = document.createElement("h3");
+nH3.textContent = niceDate;
+const headerEl = document.createElement("header");
+headerEl.appendChild(nH3);
+document.body.prepend(headerEl);
 
 // 3. dive '#app' sukurti section elementa i ji ideti h4 elementa ir paragrafa su
 // lorem tekstais
