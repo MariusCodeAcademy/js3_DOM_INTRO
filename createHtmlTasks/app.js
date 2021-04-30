@@ -60,8 +60,9 @@ function test() {
 // 6. po main-article sukurti aside elmenta su klase 'info'
 // jame sukurti nav elementa. nav elemente sugeneruoti nuorodu sarasa
 // su nuorodom vedandciom i about.html, contact.html, home.html
+const asideEl = document.createElement("aside");
 const navEl = document.createElement("nav");
-navEl.className = "info";
+asideEl.className = "info";
 ["about", "contact", "home"].forEach((linkName) => {
   const newLinkEl = document.createElement("a");
   newLinkEl.textContent = linkName;
@@ -69,7 +70,8 @@ navEl.className = "info";
   newLinkEl.style.marginRight = "20px";
   navEl.appendChild(newLinkEl);
 });
-mainArticleEl.after(navEl);
+asideEl.appendChild(navEl);
+mainArticleEl.after(asideEl);
 
 // 7. po aside.info el suskurti div su klase modal
 // modal viduje sukurti h2 antraste su tekstu 0
@@ -80,10 +82,42 @@ mainArticleEl.after(navEl);
 // aprasyti .modal klase stiliaus faile taip kad jis butu nematomas
 // ekrano centre 20 x 20 proc ekrano dydzio
 // turetu juoda apvada ir butu centruotas ekravo viduryje
-
+const modalHtmlText = `
+    <div class="modal">
+      <h2>0</h2>
+      <button>add</button>
+      <button>sub</button>
+    </div>
+`;
+asideEl.insertAdjacentHTML("afterend", modalHtmlText);
+const modalEl = document.querySelector(".modal");
 // 8.sukurti mygtuka headeryje su tekstu 'modal', ji paspaudus turetu pasirodyti
 // arba pasislepti modal. (prideti nuimti klase? )
+const btnModalEl = document.createElement("button");
+btnModalEl.textContent = "Toggle modal";
+btnModalEl.onclick = () => {
+  modalEl.classList.toggle("visible");
+};
+headerEl.appendChild(btnModalEl);
+// prideti mygtukam eventus
+modalEl.children[1].onclick = addHandler;
+modalEl.children[2].onclick = subHandler;
+let currentCounterEl = modalEl.children[0];
+currentCounterEl.style.fontSize = "50px";
 
+function addHandler() {
+  console.log("addHandler");
+  // issisaugom dabartine reiksme
+  let currentValue = currentCounterEl.textContent;
+  // irasom padinta reiksme
+  currentCounterEl.textContent = ++currentValue;
+}
+function subHandler() {
+  // issisaugom dabartine reiksme
+  let currentValue = currentCounterEl.textContent;
+  // irasom padinta reiksme
+  currentCounterEl.textContent = --currentValue;
+}
 // 9. sukurti div su id person ir jame atvaizduoti informacija is objekto:
 // paragraphu ir span pavidaliu pvz
 // <p><strong>Name:</strong>Araranas</p>
