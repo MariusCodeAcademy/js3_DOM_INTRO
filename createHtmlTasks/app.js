@@ -28,9 +28,24 @@ document.body.prepend(headerEl);
 // 4. is duoto masyvo sugeneruoti li elementus ir sudeti juo is 'item-list'
 // sarasa
 let colors = ["blue", "green", "orange", "tomato", "red"];
+// nuoroda i ul el
+const ulEl = document.querySelector(".item-list");
+console.log(ulEl);
+
+colors.forEach((color) => {
+  let newliEl = document.createElement("li");
+  newliEl.textContent = color;
+  ulEl.appendChild(newliEl);
+  // ulEl.appendChild(newliEl);
+});
 
 // 5. .main-article elementui prideti antraste h4 su klase
 // '.main-article__title'
+const mainArticleEl = document.querySelector(".main-article");
+const elString = `
+  <h4 class='main-article__title'> Main article title </h4>
+`;
+mainArticleEl.innerHTML = elString;
 
 // 5.1 .main-article elementui prideti 2 paragrafus su lorem tekstais kurie turetu klases
 // '.main-article__text'
