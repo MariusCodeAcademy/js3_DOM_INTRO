@@ -46,13 +46,30 @@ const elString = `
   <h4 class='main-article__title'> Main article title </h4>
 `;
 mainArticleEl.innerHTML = elString;
-
+// eventai paspaudus
+mainArticleEl.onclick = function () {
+  console.log("click");
+};
+mainArticleEl.onclick = test;
+function test() {
+  console.log("test");
+}
 // 5.1 .main-article elementui prideti 2 paragrafus su lorem tekstais kurie turetu klases
 // '.main-article__text'
 
 // 6. po main-article sukurti aside elmenta su klase 'info'
 // jame sukurti nav elementa. nav elemente sugeneruoti nuorodu sarasa
 // su nuorodom vedandciom i about.html, contact.html, home.html
+const navEl = document.createElement("nav");
+navEl.className = "info";
+["about", "contact", "home"].forEach((linkName) => {
+  const newLinkEl = document.createElement("a");
+  newLinkEl.textContent = linkName;
+  newLinkEl.href = linkName + ".html";
+  newLinkEl.style.marginRight = "20px";
+  navEl.appendChild(newLinkEl);
+});
+mainArticleEl.after(navEl);
 
 // 7. po aside.info el suskurti div su klase modal
 // modal viduje sukurti h2 antraste su tekstu 0
